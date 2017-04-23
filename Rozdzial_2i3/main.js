@@ -12,4 +12,26 @@ function mnoz(a,b) {
   return c;
 }
 
-refR3Z1.innerHTML = mnoz(2,2);
+var pokaz = '';
+for (i=1;i<10;i++){
+  for (j=1;j<10;j++){
+   pokaz += mnoz(i,j) + ', ';
+  }
+  pokaz += '<br>';
+}
+
+refR3Z1.innerHTML = pokaz + '<br><br>';
+
+function args() {
+  var i=0;
+  var res = '';
+  var liczParams = arguments.length;
+  for (i=0;i<liczParams;i++){
+    res += arguments[i] + ', ';
+  }
+  return res;
+}
+
+pokaz += args(1,2,3)
+
+refR3Z1.innerHTML = pokaz;
